@@ -71,11 +71,10 @@ void printStack(Stack S)
     cout << endl;
 }
 
-void searchPath(int maze[19][21][2], Stack &S, int Dimensi_1, int Dimensi_2)
+void searchPath(int maze[21][21][2], Stack &S, int Dimensi_1, int Dimensi_2)
 {
     // Kondisi untuk berhentinya adalah koordinat titik akhir (1,20)
-    if (!(Dimensi_1 == 1 && Dimensi_2 == 20))
-    // if (!(Dimensi_1 == 17 && Dimensi_2 == 0))
+    if (!(Dimensi_1 == 20 && Dimensi_2 == 11))
     {
         if ((maze[Dimensi_1][Dimensi_2 + 1][0] == 1) && (maze[Dimensi_1][Dimensi_2 + 1][1] == 0))
         // Prioritas pertama, bergerak ke kanan
@@ -118,9 +117,9 @@ void searchPath(int maze[19][21][2], Stack &S, int Dimensi_1, int Dimensi_2)
     }
 }
 
-void printArray(int maze[19][21][2])
+void printArray(int maze[21][21][2])
 {
-    for (int iterator_i = 0; iterator_i < 19; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
     {
         for (int iterator_j = 0; iterator_j < 21; iterator_j++)
         {
@@ -131,9 +130,9 @@ void printArray(int maze[19][21][2])
     cout << endl;
 }
 
-void printMaze(int maze[19][21][2])
+void printMaze(int maze[21][21][2])
 {
-    for (int iterator_i = 0; iterator_i < 19; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
     {
         for (int iterator_j = 0; iterator_j < 21; iterator_j++)
         {
@@ -151,11 +150,11 @@ void printMaze(int maze[19][21][2])
     cout << endl;
 }
 
-void printPath(int maze[19][21][2], Stack S)
+void printPath(int maze[21][21][2], Stack S)
 {
     address pointer_P;
     bool found;
-    for (int iterator_i = 0; iterator_i < 19; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
     {
         for (int iterator_j = 0; iterator_j < 21; iterator_j++)
         {
@@ -175,7 +174,14 @@ void printPath(int maze[19][21][2], Stack S)
             }
             if (!found)
             {
-                cout << maze[iterator_i][iterator_j][0] << " ";
+                if (maze[iterator_i][iterator_j][0] == 1)
+                {
+                    cout << "X ";
+                }
+                else
+                {
+                    cout << "* ";
+                }
             }
         }
         cout << endl;
