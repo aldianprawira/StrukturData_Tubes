@@ -71,10 +71,10 @@ void printStack(Stack S)
     cout << endl;
 }
 
-void searchPath(int maze[21][21][2], Stack &S, int Dimensi_1, int Dimensi_2)
+void searchPath(int maze[51][51][2], Stack &S, int Dimensi_1, int Dimensi_2)
 {
-    // Kondisi untuk berhentinya adalah koordinat titik akhir (1,20)
-    if (!(Dimensi_1 == 20 && Dimensi_2 == 11))
+    // Kondisi untuk berhentinya adalah koordinat titik akhir (20,11)
+    if (!(Dimensi_1 == 50 && Dimensi_2 == 26))
     {
         if ((maze[Dimensi_1][Dimensi_2 + 1][0] == 1) && (maze[Dimensi_1][Dimensi_2 + 1][1] == 0))
         // Prioritas pertama, bergerak ke kanan
@@ -117,11 +117,11 @@ void searchPath(int maze[21][21][2], Stack &S, int Dimensi_1, int Dimensi_2)
     }
 }
 
-void printArray(int maze[21][21][2])
+void printArray(int maze[51][51][2])
 {
-    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 51; iterator_i++)
     {
-        for (int iterator_j = 0; iterator_j < 21; iterator_j++)
+        for (int iterator_j = 0; iterator_j < 51; iterator_j++)
         {
             cout << maze[iterator_i][iterator_j][0] << " ";
         }
@@ -130,11 +130,11 @@ void printArray(int maze[21][21][2])
     cout << endl;
 }
 
-void printMaze(int maze[21][21][2])
+void printMaze(int maze[51][51][2])
 {
-    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 51; iterator_i++)
     {
-        for (int iterator_j = 0; iterator_j < 21; iterator_j++)
+        for (int iterator_j = 0; iterator_j < 51; iterator_j++)
         {
             if (maze[iterator_i][iterator_j][0] == 1)
             {
@@ -150,13 +150,13 @@ void printMaze(int maze[21][21][2])
     cout << endl;
 }
 
-void printPath(int maze[21][21][2], Stack S)
+void printPath(int maze[51][51][2], Stack S)
 {
     address pointer_P;
     bool found;
-    for (int iterator_i = 0; iterator_i < 21; iterator_i++)
+    for (int iterator_i = 0; iterator_i < 51; iterator_i++)
     {
-        for (int iterator_j = 0; iterator_j < 21; iterator_j++)
+        for (int iterator_j = 0; iterator_j < 51; iterator_j++)
         {
             pointer_P = top(S);
             found = false;
@@ -176,11 +176,11 @@ void printPath(int maze[21][21][2], Stack S)
             {
                 if (maze[iterator_i][iterator_j][0] == 1)
                 {
-                    cout << "X ";
+                    cout << "* ";
                 }
                 else
                 {
-                    cout << "* ";
+                    cout << "0 ";
                 }
             }
         }

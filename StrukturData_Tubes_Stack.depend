@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1673259888 source:d:\coding\c++\strukturdata_tubes_stack\maze.cpp
+1673273741 source:d:\coding\c++\strukturdata_tubes_stack\maze.cpp
 	"maze.h"
 
-1673259135 d:\coding\c++\strukturdata_tubes_stack\maze.h
+1673273270 d:\coding\c++\strukturdata_tubes_stack\maze.h
 	<iostream>
 
-1673259454 source:d:\coding\c++\strukturdata_tubes_stack\main.cpp
+1673273335 source:d:\coding\c++\strukturdata_tubes_stack\main.cpp
 	"maze.h"
 
