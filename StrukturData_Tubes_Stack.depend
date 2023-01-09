@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1673244519 source:d:\coding\c++\strukturdata_tubes_stack\maze.cpp
+	"maze.h"
+
+1673244625 d:\coding\c++\strukturdata_tubes_stack\maze.h
+	<iostream>
+
+1673244490 source:d:\coding\c++\strukturdata_tubes_stack\main.cpp
+	"maze.h"
+
