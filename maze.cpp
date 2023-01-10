@@ -73,7 +73,7 @@ void printStack(Stack S)
 
 void searchPath(int maze[51][51][2], Stack &S, int Dimensi_1, int Dimensi_2)
 {
-    // Kondisi untuk berhentinya adalah koordinat titik akhir (20,11)
+    // Kondisi untuk berhentinya adalah koordinat titik akhir (50,26)
     if (!(Dimensi_1 == 50 && Dimensi_2 == 26))
     {
         if ((maze[Dimensi_1][Dimensi_2 + 1][0] == 1) && (maze[Dimensi_1][Dimensi_2 + 1][1] == 0))
@@ -193,10 +193,10 @@ int selectMenu()
 {
     int userChoice = 0;
     cout << "============================== MENU ==============================\n";
-    cout << "1. Menampilkan labirin representasi array\n";
-    cout << "2. Menampilkan labirin yang belum di-solve\n";
+    cout << "1. Menampilkan maze representasi array\n";
+    cout << "2. Menampilkan maze yang belum di-solve\n";
     cout << "3. Menampilkan koordinat jalur setelah di-solve\n";
-    cout << "4. Menampilkan labirin yang sudah di-solve\n";
+    cout << "4. Menampilkan maze yang sudah di-solve\n";
     cout << "0. Exit\n\n";
     cout << "Masukkan menu: ";
     cin >> userChoice;
